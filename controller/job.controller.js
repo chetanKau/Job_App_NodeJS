@@ -2,16 +2,9 @@
 const Job = require("./../model/job.model")
 
 const createJob = async (req, res) => {
-    const newJob = await new Job({
-        title: req.body.title,
-        description: req.body.description,
-        company: req.body.company,
-        location: req.body.location,
-        salary: req.body.salary
-
-    })
+    const newJob = await new Job(req.body)
     const savedData = await newJob.save();
-    // res.send(newJob)
+
     // console.log(savedData);
     res.send(savedData)
 }
