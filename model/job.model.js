@@ -18,7 +18,7 @@ const jobSchema = new mongoose.Schema({
     },
     salary: {
         type: Number,
-        default:0
+        default: 0
     }
 }
 )

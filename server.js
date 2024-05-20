@@ -8,7 +8,8 @@ const app = express()
 app.use(express.json())
 
 // Connecting my app with mongodb using mongoose
-mongoose.connect('mongodb+srv://chetankaushik29:MKxKjzwLzq5ZXrbB@jobapp.gfmg2tl.mongodb.net/')
+mongoose.connect('mongodb+srv://chetankaushik29:P0WT4MtUfYMMNjrr@jobapp.gfmg2tl.mongodb.net/?retryWrites=true&w=majority&appName=jobapp')
+
     .then(() => {
         console.log("Connection with Database established successfull")
     })
