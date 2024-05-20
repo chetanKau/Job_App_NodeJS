@@ -1,14 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const jobRouter = require('./routes/job.route')
+const dotenv=require('dotenv')
+
 
 const app = express()
+dotenv.config();
 
 // express.json is reading all body value
 app.use(express.json())
-
+console.log(process.env.DB_Connect_Url);
 // Connecting my app with mongodb using mongoose
-mongoose.connect('mongodb+srv://chetankaushik29:P0WT4MtUfYMMNjrr@jobapp.gfmg2tl.mongodb.net/?retryWrites=true&w=majority&appName=jobapp')
+mongoose.connect(process.env.DB_Connect_Url)
+
 
     .then(() => {
         console.log("Connection with Database established successfull")
