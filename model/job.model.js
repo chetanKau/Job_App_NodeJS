@@ -1,4 +1,4 @@
-const { debugErrorMap } = require('firebase/auth/web-extension');
+
 const mongoose = require('mongoose');
 
 
