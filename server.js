@@ -9,9 +9,10 @@ dotenv.config();
 
 // express.json is reading all body value
 app.use(express.json())
+const dbConnectUrl=process.env.DB_Connect_Url
 // console.log(process.env.DB_Connect_Url);
 // Connecting my app with mongodb using mongoose
-mongoose.connect(`${process.env.DB_Connect_Url}`)
+mongoose.connect(`${dbConnectUrl}`)
 
 
     .then(() => {

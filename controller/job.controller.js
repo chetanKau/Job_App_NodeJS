@@ -1,4 +1,3 @@
-
 const Job = require("./../model/job.model")
 
 const createJob = async (req, res) => {
